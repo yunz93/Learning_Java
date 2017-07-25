@@ -13,7 +13,7 @@ import java.util.Set;
  * 所以我用了一种比较笨的方法，HashMap
  * Created by Mahe on 2017/7/21.
  */
-public class LintCode_83 {
+public class Solution_83 {
     public int singleNumberII(int[] A) {
         if (A.length == 0) {
             return 0;
