@@ -1,36 +1,60 @@
 package ConcurrentTools;
 
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
- * CyclicBarrier çš„å­—é¢æ„æ€æ˜¯å¯å¾ªç¯ä½¿ç”¨ï¼ˆCyclicï¼‰çš„å±éšœï¼ˆBarrierï¼‰
- * è®©ä¸€ç»„çº¿ç¨‹åˆ°è¾¾ä¸€ä¸ªå±éšœï¼ˆä¹Ÿå¯ä»¥å«åŒæ­¥ç‚¹ï¼‰æ—¶è¢«é˜»å¡ï¼Œç›´åˆ°æœ€åä¸€ä¸ªçº¿ç¨‹åˆ°è¾¾å±éšœæ—¶ï¼Œå±éšœæ‰ä¼šå¼€é—¨
- * æ‰€æœ‰è¢«å±éšœæ‹¦æˆªçš„çº¿ç¨‹æ‰ä¼šç»§ç»­å¹²æ´»
+ * CyclicBarrier µÄ×ÖÃæÒâË¼ÊÇ¿ÉÑ­»·Ê¹ÓÃ£¨Cyclic£©µÄÆÁÕÏ£¨Barrier£©
+ * ÈÃÒ»×éÏß³Ìµ½´ïÒ»¸öÆÁÕÏ£¨Ò²¿ÉÒÔ½ĞÍ¬²½µã£©Ê±±»×èÈû£¬Ö±µ½×îºóÒ»¸öÏß³Ìµ½´ïÆÁÕÏÊ±£¬ÆÁÕÏ²Å»á¿ªÃÅ
+ * ËùÓĞ±»ÆÁÕÏÀ¹½ØµÄÏß³Ì²Å»á¼ÌĞø¸É»î
  * Created by Administrator on 2017/7/28 0028.
  */
 public class CyclicBarrierTest {
 
-    static CyclicBarrier c = new CyclicBarrier(3);
-
-    public static void main(String[] args) {
-        new Thread(new Runnable() {
+    public static void main(String[] args) throws InterruptedException {
+        ExecutorService exec = Executors.newCachedThreadPool();
+        final CyclicBarrier barrier = new CyclicBarrier(4, new Runnable() {
 
             @Override
             public void run() {
-                try {
-                    c.await();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                System.out.println(1);
+                System.out.println("ºÃÁË£¬´ó¼Ò¿ÉÒÔÈ¥³Ô·¹ÁË¡­¡­"  );
             }
-        }).start();
+        });
 
-        try {
-            c.await();
-        } catch (Exception e) {
-            e.printStackTrace();
+        System.out.println("Òª³Ô·¹£¬±ØĞëËùÓĞÈË¶¼µ½ÖÕµã£¬oK?");
+        System.out.println("²»·ÅÆú²»Å×Æú£¡");
+
+        for (int i = 0; i < 4; i++) {
+            exec.execute(new Runnable() {
+
+                @Override
+                public void run() {
+                    System.out
+                            .println(Thread.currentThread().getName() + ":Go");
+                    try {
+                        Thread.sleep((long) (2000 * Math.random()));
+                    } catch (InterruptedException e1) {
+                        e1.printStackTrace();
+                    }
+                    System.out.println(Thread.currentThread().getName()
+                            + ":ÎÒµ½ÖÕµãÁË");
+                    try {
+                        barrier.await();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (BrokenBarrierException e) {
+                        e.printStackTrace();
+                    }
+
+                    System.out.println(Thread.currentThread().getName()
+                            + ":ÖÕÓÚ¿ÉÒÔ³Ô·¹À²£¡");
+
+                }
+            });
         }
-        System.out.println(2);
+        exec.shutdown();
+
     }
 }
