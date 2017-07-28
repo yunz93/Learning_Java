@@ -3,7 +3,6 @@ package LintCode;
 /**
  * LintCode 203
  * 线段树的修改
- * Created by Mahe on 2017/7/21.
  */
 public class Solution_203 {
     /**

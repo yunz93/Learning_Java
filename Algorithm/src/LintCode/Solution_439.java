@@ -3,7 +3,6 @@ package LintCode;
 /**
  * LintCode 439
  * 线段树的构造II
- * Created by Mahe on 2017/7/21.
  */
 public class Solution_439 {
     /**

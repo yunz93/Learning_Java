@@ -5,7 +5,6 @@ package LintCode;
  * 搜索旋转排序数组2
  * 在搜索选择排序数组的那题的基础上，增加了数组中有重复值的设定
  * 所以相对上题，也需要增加一个判断mid和left相等的情况
- * Created by Mahe on 2017/7/21.
  */
 public class Solution_63 {
     public boolean search(int[] A, int target) {
