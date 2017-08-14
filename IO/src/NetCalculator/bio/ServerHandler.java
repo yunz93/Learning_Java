@@ -1,6 +1,6 @@
-package calculator.bio;
+package NetCalculator.bio;
 
-import calculator.util.Calculator;
+import NetCalculator.util.Calculator;
 
 import java.io.BufferedReader;
 import java.io.IOException;

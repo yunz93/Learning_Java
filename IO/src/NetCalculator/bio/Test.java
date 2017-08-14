@@ -1,4 +1,4 @@
-package calculator.bio;
+package NetCalculator.bio;
 
 import java.io.IOException;
 import java.util.Random;
