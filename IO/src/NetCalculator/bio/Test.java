@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Random;
 
 /**
- * Created by Administrator on 2017/8/11 0011.
+ * 测试类
  */
 public class Test {
     //测试主方法

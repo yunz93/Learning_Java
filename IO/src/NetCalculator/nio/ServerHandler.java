@@ -1,8 +1,6 @@
 package NetCalculator.nio;
 
 import NetCalculator.util.Calculator;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -13,6 +11,9 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * NIO 服务器端处理类
+ */
 public class ServerHandler implements Runnable {
     private Selector selector;
     private ServerSocketChannel serverSocketChannel;

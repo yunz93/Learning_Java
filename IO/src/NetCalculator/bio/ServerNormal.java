@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Created by Administrator on 2017/8/11 0011.
+ * BIO 服务器端
  */
 public class ServerNormal {
     // 默认端口号

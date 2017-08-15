@@ -9,6 +9,9 @@ import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * NIO 客户端处理类
+ */
 public class ClientHandler implements Runnable {
     private String host;
     private int port;

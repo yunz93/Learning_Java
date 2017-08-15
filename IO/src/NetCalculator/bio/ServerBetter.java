@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * Created by Administrator on 2017/8/11 0011.
+ * BIO 服务器端 （线程池)
  */
 public class ServerBetter {
     //默认的端口号

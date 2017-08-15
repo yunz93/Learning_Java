@@ -2,6 +2,9 @@ package NetCalculator.nio;
 
 import java.util.Scanner;
 
+/**
+ * NIO 客户端
+ */
 public class Client {
     private static String DEFAULT_HOST = "127.0.0.1";
     private static int DEFAULT_PORT = 12345;

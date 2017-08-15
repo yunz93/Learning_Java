@@ -1,5 +1,8 @@
 package NetCalculator.nio;
 
+/**
+ * NIO 服务器端
+ */
 public class Server {
     // 默认端口
     private static int DEFAULT_PORT = 12345;

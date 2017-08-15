@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Created by Administrator on 2017/8/11 0011.
+ * BIO 服务器端处理类
  */
 public class ServerHandler implements Runnable {
     private Socket socket;

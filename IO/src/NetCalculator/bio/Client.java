@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
- * Created by Administrator on 2017/8/11 0011.
+ * BIO 客户端
  */
 public class Client {
     //默认的端口号
