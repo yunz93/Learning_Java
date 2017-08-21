@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * System test
+ * System NetCalculator
  * Created by Administrator on 2017/6/20 0020.
  */
 public class SystemTest {
