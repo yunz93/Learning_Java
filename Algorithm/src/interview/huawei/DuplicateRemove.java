@@ -1,8 +1,9 @@
-package LintCode;
+package interview.huawei;
+
 
 import java.util.Scanner;
 
-public class Main2 {
+public class  DuplicateRemove{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {

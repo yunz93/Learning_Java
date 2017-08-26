@@ -2,7 +2,10 @@ package interview.huawei;
 
 import java.util.Scanner;
 
-public class Main2 {
+/**
+ * 华为笔试题，2~64位任意进制转换
+ */
+public class Conversion {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
@@ -17,7 +20,7 @@ public class Main2 {
     }
 
     private static String solution(int n1, int n2, String num) {
-        // 先转换为10进制
+        // 先转换为10进制，再转换为其他进制
         String res = null;
         int n = 0;
 
