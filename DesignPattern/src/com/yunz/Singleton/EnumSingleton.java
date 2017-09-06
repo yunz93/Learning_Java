@@ -1,5 +1,9 @@
 package com.yunz.Singleton;
 
+/**
+ * 枚举方式
+ * 线程安全型，最推荐
+ */
 public class EnumSingleton{
     private EnumSingleton(){}
 
