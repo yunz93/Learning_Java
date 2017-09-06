@@ -4,20 +4,20 @@
 
 其中的内容可能涉及方方面面，算法，面试题，验证一些书中问题的小demo，估计没人会看吧，纯做仓库用。
 
-- Algorithm 为算法
-    - LintCode 题解
-    - Interview 各公司笔试面试题
-    - Sort 排序算法
+- Algorithm >>> 算法
+    - LintCode >>> 题解
+    - Interview >>> 各公司笔试面试题
+    - Sort >>> 排序算法
 
-- Basic 为 Java 基础
+- Basic Java 基础
 
 
-- Concurrent 为并发
+- Concurrent >>> 并发
 
-- IO 为 Java IO 
+- IO >>> Java IO 
 
-- JVM 为 JVM 基础
+- JVM >>> JVM 基础
 
-- DesignPattern 为设计模式
+- DesignPattern >>> 设计模式
 
-- Web 为 Java web 相关
+- Web >>>  Java web
